@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validación Exitosa</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(135deg, #6a11cb, #2575fc);
+            font-family: 'Arial', sans-serif;
+            color: white;
+            overflow: hidden;
+        }
+        .message {
+            text-align: center;
+            animation: fadeIn 2s ease-in-out, bounce 1s infinite alternate;
+        }
+        .message h1 {
+            font-size: 3rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            animation: colorChange 3s infinite alternate;
+        }
+        .message p {
+            font-size: 1.5rem;
+            margin-top: 1rem;
+        }
+
+        /* Animaciones */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: scale(0.8);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+        @keyframes bounce {
+            from {
+                transform: translateY(0);
+            }
+            to {
+                transform: translateY(-10px);
+            }
+        }
+        @keyframes colorChange {
+            0% { color: #fff; }
+            50% { color: #ffe700; }
+            100% { color: #00ffea; }
+        }
+
+        /* Botón interactivo */
+        .button {
+            margin-top: 2rem;
+            padding: 15px 30px;
+            background-color: white;
+            color: #6a11cb;
+            border: none;
+            border-radius: 25px;
+            font-size: 1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        .button:hover {
+            background-color: #2575fc;
+            color: white;
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="message">
+        <h1>¡Validación Correcta!</h1>
+        <p>Por eso has llegado hasta aquí. Felicitaciones, Profe, pónganos un 5, nos lo merecemos.</p>
+        <button class="button" onclick="showThankYou()">Click para celebrar</button>
+    </div>
+
+    <script>
+        function showThankYou() {
+            const body = document.body;
+            body.innerHTML = `
+                <div class="message">
+                    <h1>¡Gracias Profe!</h1>
+                    <p>Este es el momento de celebrar el esfuerzooooo</p>
+                </div>`;
+        }
+    </script>
+</body>
+</html>
